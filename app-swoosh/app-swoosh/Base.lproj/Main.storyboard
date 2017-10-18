@@ -33,6 +33,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pF4-94-vJi" kind="show" id="92z-f7-WxA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tH-jU-dHg">
                                 <rect key="frame" x="83" y="145" width="209" height="54"/>
@@ -163,6 +166,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-vc-7Eg">
+                                <rect key="frame" x="16" y="16" width="50" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="TIF-MG-9Ub"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="d5R-2e-ssf"/>
+                                    <constraint firstAttribute="width" constant="50" id="lsB-dX-WwQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="zUj-xV-N64"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="GUw-Ke-QVq" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="NBs-i2-dwo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -171,19 +187,23 @@
                             <constraint firstItem="drk-df-5Q5" firstAttribute="top" secondItem="Vio-5k-cbB" secondAttribute="top" id="Ihl-sm-rIp"/>
                             <constraint firstItem="6us-jt-gM2" firstAttribute="leading" secondItem="eDH-RJ-AWg" secondAttribute="leading" constant="16" id="JJh-cs-bQ6"/>
                             <constraint firstItem="eDH-RJ-AWg" firstAttribute="trailing" secondItem="6us-jt-gM2" secondAttribute="trailing" constant="16" id="LU4-bt-m6w"/>
+                            <constraint firstItem="Pmi-vc-7Eg" firstAttribute="leading" secondItem="eDH-RJ-AWg" secondAttribute="leading" constant="16" id="NKL-Ll-eXD"/>
                             <constraint firstItem="eDH-RJ-AWg" firstAttribute="bottom" secondItem="f3T-g0-Iv7" secondAttribute="bottom" constant="20" id="ShC-he-I32"/>
                             <constraint firstItem="sMm-HH-npa" firstAttribute="top" secondItem="eDH-RJ-AWg" secondAttribute="top" constant="20" id="TZe-YU-yeN"/>
                             <constraint firstItem="f3T-g0-Iv7" firstAttribute="leading" secondItem="eDH-RJ-AWg" secondAttribute="leading" constant="16" id="X80-0H-juR"/>
                             <constraint firstItem="eDH-RJ-AWg" firstAttribute="trailing" secondItem="f3T-g0-Iv7" secondAttribute="trailing" constant="16" id="Zdo-3a-ngL"/>
                             <constraint firstItem="drk-df-5Q5" firstAttribute="trailing" secondItem="eDH-RJ-AWg" secondAttribute="trailing" id="bVY-aj-OEM"/>
+                            <constraint firstItem="Pmi-vc-7Eg" firstAttribute="top" secondItem="Vio-5k-cbB" secondAttribute="top" constant="16" id="fp4-Qv-saB"/>
                             <constraint firstItem="eDH-RJ-AWg" firstAttribute="trailing" secondItem="sMm-HH-npa" secondAttribute="trailing" id="iIC-mV-7Jg"/>
                             <constraint firstItem="6us-jt-gM2" firstAttribute="top" secondItem="sMm-HH-npa" secondAttribute="bottom" constant="88" id="pJ5-49-8wk"/>
                             <constraint firstItem="drk-df-5Q5" firstAttribute="leading" secondItem="eDH-RJ-AWg" secondAttribute="leading" id="pzj-5C-T5w"/>
+                            <constraint firstItem="Pmi-vc-7Eg" firstAttribute="top" secondItem="Vio-5k-cbB" secondAttribute="top" constant="16" id="tEV-On-Lg5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eDH-RJ-AWg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugm-hq-OJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GUw-Ke-QVq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="133.5832083958021"/>
         </scene>
@@ -281,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
